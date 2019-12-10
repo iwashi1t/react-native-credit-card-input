@@ -16,14 +16,12 @@ import CCInput from "./CCInput";
 import { InjectedProps } from "./connectToState";
 
 const s = StyleSheet.create({
-  container: {
-    alignItems: "center",
-  },
+  container: {},
   form: {
     marginTop: 20,
   },
   inputContainer: {
-    marginLeft: 20,
+    marginRight: 16,
   },
   inputLabel: {
     fontWeight: "bold",
@@ -33,10 +31,9 @@ const s = StyleSheet.create({
   },
 });
 
-const CVC_INPUT_WIDTH = 70;
-const EXPIRY_INPUT_WIDTH = CVC_INPUT_WIDTH;
-const CARD_NUMBER_INPUT_WIDTH_OFFSET = 40;
-const CARD_NUMBER_INPUT_WIDTH = Dimensions.get("window").width - EXPIRY_INPUT_WIDTH - CARD_NUMBER_INPUT_WIDTH_OFFSET;
+const CVC_INPUT_WIDTH = 50;
+const EXPIRY_INPUT_WIDTH = 70;
+const CARD_NUMBER_INPUT_WIDTH = 180;
 const NAME_INPUT_WIDTH = CARD_NUMBER_INPUT_WIDTH;
 const PREVIOUS_FIELD_OFFSET = 40;
 const POSTAL_CODE_INPUT_WIDTH = 120;
