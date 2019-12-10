@@ -21,7 +21,7 @@ const s = StyleSheet.create({
     marginTop: 20,
   },
   inputContainer: {
-    marginRight: 16,
+    marginLeft: 16,
   },
   inputLabel: {
     fontWeight: "bold",
@@ -165,7 +165,7 @@ export default class CreditCardInput extends Component {
           style={s.form}>
           <CCInput {...this._inputProps("number")}
             keyboardType="numeric"
-            containerStyle={[s.inputContainer, inputContainerStyle, { width: CARD_NUMBER_INPUT_WIDTH }]} />
+            containerStyle={[s.inputContainer, inputContainerStyle, { width: CARD_NUMBER_INPUT_WIDTH, marginLeft: 0 }]} />
           <CCInput {...this._inputProps("expiry")}
             keyboardType="numeric"
             containerStyle={[s.inputContainer, inputContainerStyle, { width: EXPIRY_INPUT_WIDTH }]} />
