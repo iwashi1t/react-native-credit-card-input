@@ -99,6 +99,7 @@ export default class CreditCardInput extends Component {
 
   _focus = field => {
     if (!field) return;
+    if (this.focusing) return;
 
     const scrollResponder = this.refs.Form.getScrollResponder();
     const nodeHandle = ReactNative.findNodeHandle(this.refs[field]);
@@ -107,7 +108,9 @@ export default class CreditCardInput extends Component {
       e => { throw e; },
       x => {
         scrollResponder.scrollTo({ x: Math.max(x - PREVIOUS_FIELD_OFFSET, 0), animated: true });
+        this.focusing = true;
         this.refs[field].focus();
+        setTimeout(() => this.focusing = false, 300);
       });
   }
 
